@@ -1,6 +1,8 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/res/styles/app_styles.dart';
+import 'package:ticket_app/res/styles/media.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}):super (key:key);
@@ -33,14 +35,26 @@ class HomeScreen extends StatelessWidget {
                     height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(image: AssetImage("assets/images/logo.avif"))
+                      image: DecorationImage(
+                        image: AssetImage(
+                          AppMedia.logo)
+                          )
                     ),                    
                     )
                   ],
                 ),
+                SizedBox(height: 25,),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal:12,vertical:12),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color(0xFF4F6FD),
+                  )
+                ),
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Icon(FluentSystemIcons.ic_fluent_search_info_regular,color: Color(0xFFbFC205),),
                       Text("search icon"),
                       Text("empty space")
                   ],
